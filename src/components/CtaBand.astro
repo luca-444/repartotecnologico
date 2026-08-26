@@ -1,0 +1,25 @@
+---
+const {
+  eyebrow = 'Il primo passo',
+  titolo = 'Un appuntamento, e sai esattamente quanto spendi',
+  testo = "Un incontro di raccolta requisiti, in studio o in video. Guardiamo com'è fatta la tua infrastruttura, cosa usi ogni giorno e cosa ti crea problemi. Poi ricevi un preventivo con un canone chiaro e l'elenco di cosa comprende.",
+  secondaryHref = '/metodo',
+  secondaryLabel = 'Come funziona il canone',
+} = Astro.props;
+---
+
+<section class="band band-ink">
+  <div class="wrap">
+    <span class="eyebrow">{eyebrow}</span>
+    <h2 style="max-width:26ch;">{titolo}</h2>
+    <p class="lead" style="margin-top:1.2rem;">{testo}</p>
+    <div class="actions">
+      <a class="btn" href="/contatti">Prenota l'appuntamento di raccolta requisiti</a>
+      <a class="btn-quiet" href={secondaryHref}>{secondaryLabel}</a>
+    </div>
+    <p class="cta-note">
+      Nessun impegno di acquisto e nessun vincolo: se il preventivo non ti
+      convince, il rapporto finisce lì.
+    </p>
+  </div>
+</section>
